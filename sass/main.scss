@@ -4,8 +4,88 @@ $main-green-hover: #82e3a2;
 $secondary-green: #d2f9dd;
 $light-hover: #E8F5E9;
 $light-grey:  #e6e6e6;
+$title-font: 'Lobster', cursive;
+$text-font: 'Roboto', sans-serif;
+
+*{
+    padding: 0;
+    margin: 0;
+}
 
 body{
     background-color: #333;
     color: $main-green;
+}
+
+#main-nav{
+    background-color: $main-green;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+
+    #nav-title{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        width: 340px;
+        align-items: center;
+        position: relative;
+
+        a{
+            font-family: $title-font;
+            font-size: 26pt;
+            color: white;
+            margin-left: 60px;
+        }
+
+        img{
+            height: 50px;
+            position: absolute;
+        }
+
+    }
+
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 500px;
+
+        .active-page{
+            border-bottom: 5px solid white;
+        }
+
+        li{
+            font-family: $text-font;
+            font-weight: 300;
+            display: inline;
+            border-bottom: 5px solid $main-green;
+            transition-timing-function: cubic-bezier(0, 1.67, 0.31, 0.76);
+            transition: border-bottom 0.2s;
+            padding: 10px 0;
+            margin-right: 20px;
+
+            &:hover{
+                border-bottom: 5px solid white;
+            }
+
+            a{
+                color: white;
+                font-size: 15pt;
+                text-decoration: none;
+
+                &:hover{
+
+                }
+
+            }
+
+        }
+
+    }
+}
+
+#app{
+    padding: 20px;
 }

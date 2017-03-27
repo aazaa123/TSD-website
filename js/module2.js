@@ -1,2 +1,2 @@
 import $ from 'jquery';
-$('h3').html('jquery');
+$('h3').html('Coming Soon! (tm)');
