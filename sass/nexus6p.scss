@@ -34,23 +34,21 @@ body{
 }
 
 #main-nav{
+    width: 100vw;
     background-color: $main-green;
     color: white;
-    display: flex;
-    justify-content: space-between;
 
     #nav-title{
         display: flex;
-        justify-content: space-between;
         padding: 15px;
         align-items: center;
         position: relative;
 
         a{
             font-family: $title-font;
-            font-size: 26pt;
+            font-size: 24pt;
             color: white;
-            margin-left: 60px;
+            margin-left: 55px;
         }
 
         img{
@@ -60,78 +58,53 @@ body{
 
     }
 
-
     ul{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 500px;
-
-        .active-page{
-            border-bottom: 5px solid white;
-        }
-
-        li{
-            font-family: $text-font;
-            font-weight: 300;
-            display: inline;
-            border-bottom: 5px solid $main-green;
-            transition-timing-function: cubic-bezier(0, 1.67, 0.31, 0.76);
-            transition: border-bottom 0.2s;
-            padding: 10px 0;
-            margin-right: 20px;
-
-            &:hover{
-                border-bottom: 5px solid white;
-            }
-
-            a{
-                color: white;
-                font-size: 15pt;
-                text-decoration: none;
-
-                &:hover{
-
-                }
-
-            }
-
-        }
-
+        display: none;
     }
+
 }
 
 #player-container{
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    overflow: hidden;
+    background-image: url("./../assets/img/mobile-background.png");
 }
 
 .player{
+    padding: 20px;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    min-width: 100vw;
+
+    img{
+        align-self: center;
+    }
 
     div{
+        width: 100%;
         padding: 10px;
+        font-size: 1.6em;
         color: white;
         background-color: $main-green;
         list-style-type: none;
-    }
-
-    :first-child {
-        margin-bottom: -20px;
+        text-align: center;
     }
 
 }
 
+
+
 #team-select{
-    display: flex;
+    display: none;
     justify-content: space-between;
     flex-direction: row;
     margin: 20px;
 
 
-    a{
-
+    button{
+        color: white;
         cursor: pointer;
         padding: 20px;
         background-color: $main-green;
@@ -141,18 +114,13 @@ body{
         border-right: 1px solid white;
         flex-grow: 1;
         font-weight: 300;
-        list-style-type: none;
-        text-align: center;
-        color: white;
-        text-decoration: none;
     }
-
 
     :last-child{
         border: none;
     }
 
-    :hover{
+    button:hover{
         background-color: $main-green-hover;
     }
 }
@@ -165,17 +133,5 @@ footer{
     position: absolute;
     bottom: 0;
     color: #333;
-    display: flex;
-    justify-content: space-around;
-
-    ul{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-
-        li{
-            list-style-type: none;
-            font-size: 1.5em;
-        }
-    }
+    height: 78px;
 }
