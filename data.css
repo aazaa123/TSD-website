@@ -1,0 +1,31 @@
+*{
+    font-family: arial;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    background-color: #999;
+    width: 500px;
+}
+
+.graphs{
+    height: 200px;
+    width: 500px;
+    background-color: #888;
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-end;
+}
+
+#win-graph{
+    background-color: lime;
+    width: 25%;
+    align-self: flex-end;
+}
+
+#lose-graph{
+    background-color: red;
+    width: 25%;
+    align-self: flex-end;
+}

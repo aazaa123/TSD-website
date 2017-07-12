@@ -15,6 +15,7 @@ html{
 *{
     padding: 0;
     margin: 0;
+    text-decoration: none;
 }
 
 *,
@@ -82,14 +83,35 @@ body{
         align-self: center;
     }
 
-    div{
+    a{
         width: 100%;
-        padding: 10px;
         font-size: 1.6em;
         color: white;
         background-color: $main-green;
         list-style-type: none;
         text-align: center;
+
+        .player-card-info{
+            display: flex;
+            justify-content: space-between;
+
+            .player-card-text{
+                flex-grow: 1;
+
+                .player-card-name{
+                    font-family: $title-font;
+                    font-size: 1.8em;
+                }
+
+                .player-card-role{
+                    font-size: 0.8em;
+                }
+            }
+        }
+
+        img{
+            height: 100%;
+        }
     }
 
 }

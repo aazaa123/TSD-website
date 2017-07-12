@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 export default class Navbar extends React.Component {
     render() {
@@ -7,14 +8,14 @@ export default class Navbar extends React.Component {
 
                 <div id="nav-title">
                     <img src="./assets/img/logos/tsd_nav.svg" height="50px"/>
-                    <a>The Swamp Donkeys</a>
+                    <a> The Swamp Donkeys </a>
                 </div>
 
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="roster">Roster</a></li>
-                    <li><a href="./../#">Matches</a></li>
-                    <li><a href="./../#">Merch</a></li>
+                    <li> <Link to="/"> Home </Link> </li>
+                    <li> <Link to="/rosters"> Rosters </Link> </li>
+                    <li> <a href="./../#"> Matches </a></li>
+                    <li> <a href="./../#"> Merch </a></li>
                 </ul>
 
             </nav>

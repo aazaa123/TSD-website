@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --inline --hot --watch-content-base --progress --colors",
+    "dev": "webpack-dev-server -d --history-api-fallback --inline --hot --watch-content-base --progress --colors",
     "browsersync": ""
   },
   "repository": {
@@ -31,6 +31,7 @@
     "file-loader": "^0.11.1",
     "history": "^1.17.0",
     "jquery": "^3.2.1",
+    "loadjs": "^3.5.0",
     "node-sass": "^4.5.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",

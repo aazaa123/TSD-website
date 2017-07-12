@@ -1,5 +1,6 @@
-require("./../js/module1.js");
-
+require("./../js/Layout.js");
+// require("./../js/openDotaApi.js");
+require("./../js/GoogleAnalytics.js");
 
 if(screen.width < 500){
 
@@ -12,11 +13,3 @@ if(screen.width < 500){
 require("./../sass/main.scss");
 
 }
-
-require("./../assets/img/chris.png");
-require("./../assets/img/dows.png");
-require("./../assets/img/gareth.png");
-require("./../assets/img/pepe.png");
-require("./../assets/img/timmy.png");
-require("./../assets/img/luigi.jpg");
-require("./../assets/img/pikachu.png");

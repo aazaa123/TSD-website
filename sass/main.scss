@@ -23,6 +23,9 @@ html{
   box-sizing: inherit;
 }
 
+a{
+    text-decoration: none;
+}
 
 body{
     background-color: #333;
@@ -31,6 +34,9 @@ body{
     position: relative;
     min-height: 100%;
     padding-bottom: 98px;
+    background-attachment: fixed;
+    background-image: url("https://www.transparenttextures.com/patterns/connected.png");
+    // background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
 }
 
 #main-nav{
@@ -88,7 +94,6 @@ body{
             a{
                 color: white;
                 font-size: 15pt;
-                text-decoration: none;
 
                 &:hover{
 
@@ -104,23 +109,64 @@ body{
 #player-container{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .player{
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 
-    div{
-        padding: 10px;
-        color: white;
-        background-color: $main-green;
-        list-style-type: none;
+    .player-card-info{
+        display: flex;
+        justify-content: space-around;
+        height: 70px;
+
+        .player-card-flag{
+            width: 70px;
+
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 2px 0 0 2px;
+            }
+        }
+
+        a{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            color: white;
+            background-color: $main-green;
+            list-style-type: none;
+            flex-grow: 1;
+            align-items: center;
+            box-sizing: border-box;
+            font-kerning: auto;
+            border-radius: 2px;
+
+            &:hover{
+                background-color: $main-green-hover;
+            }
+
+            .player-card-name{
+                font-size: 2.4em;
+                line-height: 0.8;
+            }
+
+            .player-card-role{
+                font-size: 1em;
+                text-align: center;
+                font-weight: 200;
+            }
+        }
+
     }
 
-    :first-child {
-        margin-bottom: -20px;
-    }
+}
 
+.player-card-info:hover > .player-card-text{
+    background-color: $main-green-hover;
 }
 
 #team-select{
@@ -128,10 +174,22 @@ body{
     justify-content: space-between;
     flex-direction: row;
     margin: 20px;
+    align-content: center;
 
+    li{
+        display: flex;
+        justify-content: center;
+
+        img{
+            height: 20px;
+            width: auto;
+            align-self: center;
+            margin-right: 5px;
+        }
+
+    }
 
     a{
-
         cursor: pointer;
         padding: 20px;
         background-color: $main-green;
@@ -147,15 +205,184 @@ body{
         text-decoration: none;
     }
 
-
     :last-child{
         border: none;
+        border-radius: 0 2px 2px 0;
     }
 
     :hover{
         background-color: $main-green-hover;
     }
 }
+
+#player-names{
+    align-items: center;
+    display: flex;
+
+    #profile-header-ign{
+        font-size: 3em;
+        padding: 0 20px;
+    }
+
+    #profile-header-name{
+        font-size: 3em;
+        // color: white;
+        font-weight: 200;
+        padding: 0 20px;
+    }
+
+}
+
+#player-profile-container{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+
+
+    #player-profile-info-container{
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .profile-section{
+            color: white;
+            margin-right: 20px;
+            height: 405px;
+            margin-bottom: 20px;
+            border-radius: 2px;
+        }
+
+        :last-child{
+            margin-right: 0;
+        }
+
+        #player-profile-card{
+            display: flex;
+            flex-direction: column;
+            width: 275px;
+
+            #player-profile-info{
+                background-color: $main-green;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                align-items: center;
+                border-radius: 2px;
+
+                #player-profile-nation{
+                    display: flex;
+
+                    img{
+                        width: 65px;
+                        height: 65px;
+                        border-radius: 2px 0 0 2px;
+                    }
+                }
+
+                #player-profile-role{
+                    flex-grow: 1;
+                    margin-left: 20px;
+                    text-align: center;
+
+                }
+
+                a{
+                    font-size: 2em;
+                }
+
+                #player-profile-age{
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 1.4em;
+                    font-family: $title-font;
+                    width: 20%;
+                    margin-right: 20px;
+
+                }
+            }
+
+        }
+
+        #player-profile-stats{
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            #games-container{
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+
+                h2{
+                    padding: 0 10px 20px 10px;
+                }
+
+                p{
+                    font-size: 2em;
+
+                }
+            }
+
+            #win-loss-graphs{
+                margin-top: 20px;
+                width: 100%;
+                display: flex;
+                align-items: flex-end;
+                flex-grow: 1;
+                justify-content: space-around;
+                height: 200px;
+
+                    img{
+                        position: absolute;
+                        align-self: center;
+                    }
+
+                    #win-graph, #lose-graph{
+                        width: 25%;
+                        height: 0;
+                    }
+
+                    #win-graph{
+                        background-color: white;
+                    }
+
+                    #lose-graph{
+                        background-color: #222;
+                    }
+
+            }
+
+        }
+
+
+        #player-profile-stats, #player-profile-bio{
+            background-color: $main-green;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        #player-profile-bio{
+            min-width: 400px;
+            flex: 1;
+        }
+
+        #player-profile-video{
+
+            video{
+                height: 405px;
+                width: 720px;
+                border-radius: 2px;
+            }
+
+        }
+
+    }
+
+}
+
 
 footer{
     width: 100%;

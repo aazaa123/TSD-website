@@ -7,24 +7,24 @@ export default class TeamSelect extends React.Component {
         return (
 
             <ul id="team-select">
-                <Link to="dota">
-                    <li> Dota 2 </li>
+                <Link to="/rosters/dota2/">
+                    <li> <img src="../../../assets/img/logos/dota2.svg" /> DOTA 2 </li>
                 </Link>
 
-                <Link to="csgo">
-                    <li> CS:GO </li>
+                <Link to="/rosters/csgo/">
+                    <li> <img src="../../../assets/img/logos/csgo.svg" /> CS:GO </li>
                 </Link>
 
-                <Link to="pokemon">
-                    <li> Pokémon </li>
+                <Link to="/rosters/pokemon/">
+                    <li> <img src="../../../assets/img/logos/pokemon.svg" /> Pokémon </li>
                 </Link>
 
-                <Link to="supermario">
-                    <li> Super Mario </li>
+                <Link to="/rosters/supermario/">
+                    <li> <img src="../../../assets/img/logos/mario.svg" /> Super Mario </li>
                 </Link>
 
-                <Link to="fm">
-                    <li> FM </li>
+                <Link to="/rosters/fm/">
+                    <li> <img src="../../../assets/img/logos/fm.svg" /> FM </li>
                 </Link>
 
             </ul>
