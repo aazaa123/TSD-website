@@ -4,6 +4,6 @@
 # The Swamp Donkeys
 New website for The Swamp Donkeys using Webpack and React
 
-# Heya 
+# DOTA 2 and CS:GO teams
 
 </div>
